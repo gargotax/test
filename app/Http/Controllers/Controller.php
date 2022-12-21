@@ -17,8 +17,13 @@ class Controller extends BaseController
         return $user;
     }
 
-    public function setName(User $user, string $name)
+    public function setName(Request $request, User $user)
     {
+        $name = $request->input('name');
+
+        if(!$name)
+            return 'name not specified';
+
         $user->name = $name;
         $user->save();
 

@@ -18,13 +18,11 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
-Route::get('/test22', function (Request $request){
-   return \App\Models\User::first();
-});
 
-ROUTE::get('user/{user}', [Controller::class, 'getName']);
 
-ROUTE::post('user/{user}/{name}', [Controller::class, 'setName']);
+Route::get('user/{user}', [Controller::class, 'getName']);
+
+Route::post('user/{user}', [Controller::class, 'setName']);
 
 
 
