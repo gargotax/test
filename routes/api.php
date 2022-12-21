@@ -20,3 +20,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::get('/test22', function (Request $request){
    return \App\Models\User::all();
 });
+
+
+
+
