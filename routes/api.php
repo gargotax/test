@@ -18,8 +18,11 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 Route::get('/test22', function (Request $request){
-   return \App\Models\User::all();
+   return \App\Models\User::first();
 });
+
+
+
 
 
 
