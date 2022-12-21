@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -21,9 +22,9 @@ Route::get('/test22', function (Request $request){
    return \App\Models\User::first();
 });
 
+ROUTE::get('user/{user}', [Controller::class, 'getName']);
 
-
-
+ROUTE::post('user/{user}/{name}', [Controller::class, 'setName']);
 
 
 
