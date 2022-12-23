@@ -22,9 +22,10 @@ Route::get('/test22', function (Request $request){
    return \App\Models\User::first();
 });
 
-ROUTE::get('user/{user}', [Controller::class, 'getName']);
+Route::post('message',[Controller::class, "storeMessage"]);
 
-ROUTE::post('user/{user}/{name}', [Controller::class, 'setName']);
+Route::get('message', [Controller::class, "getMessage"]);
 
+Route::delete('message/{message_id}', [Controller::class, "deleteMessage"]);
 
-
+Route::put('message/', [Controller::class, "updateMessage"]);
